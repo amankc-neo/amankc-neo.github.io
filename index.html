@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi, I am Aman K. Choudhary</title>
+    <title>Aman K. Choudhary | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #fff;
-        }
-
-        header {
-            background-color: #007BFF;
-            color: white;
-            padding: 20px 0;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             text-align: center;
         }
 
+        header {
+            background-color: transparent;
+            padding: 20px 0;
+        }
+
         h1 {
+            font-size: 4em; /* Larger font for the name */
             margin: 0;
-            font-size: 2.5em;
+            color: #FFD700;
+        }
+
+        h2 {
+            font-size: 1.5em; /* Smaller font for the description */
+            margin: 10px 0;
+            color: #ffffff;
         }
 
         nav {
@@ -33,21 +44,43 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: white;
+            color: #FFD700;
             font-weight: 700;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        button {
+            background-color: #FFD700;
+            border: none;
+            color: black;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #FFC107;
         }
 
         section {
             padding: 20px;
             margin: 20px;
-            background-color: #1a1a1a;
+            background-color: #1E1E1E;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-        }
-
-        h2 {
-            color: #007BFF;
-            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+            width: 80%;
+            max-width: 600px;
         }
 
         .content {
@@ -55,40 +88,34 @@
             margin-top: 10px;
         }
 
-        .project, .skill {
-            margin: 15px 0;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #333;
-        }
-
         footer {
             margin-top: 20px;
             text-align: center;
             padding: 10px 0;
-            background-color: #007BFF;
-            color: white;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Aman KC</h1>
+        <h1>Hi I am Aman K. Choudhary</h1> <!-- Updated header -->
+        <h2>Cloud & DevOps Enthusiast</h2> <!-- Added subheader -->
+        <h2>DevOps & Cloud Innovator | Crafting Scalable Solutions with Kubernetes, CI/CD, and Automation | Driving Efficiency and Future-Proofing IT Operations | Aiming to learn more</h2> <!-- Updated description -->
         <nav>
             <a href="#projects" onclick="toggleSection('project-content')">Projects</a>
             <a href="#skills" onclick="toggleSection('skill-content')">Skills</a>
         </nav>
+        <button onclick="toggleSection('project-content')">See My Projects</button>
     </header>
 
     <section id="projects">
-        <h2 onclick="toggleSection('project-content')">Projects</h2>
+        <h2>Projects</h2>
         <div class="content" id="project-content">
             <div id="project-list"></div>
         </div>
     </section>
 
     <section id="skills">
-        <h2 onclick="toggleSection('skill-content')">Skills</h2>
+        <h2>Skills</h2>
         <div class="content" id="skill-content">
             <div id="skill-list"></div>
         </div>
@@ -96,10 +123,10 @@
 
     <footer>
         <h2>Contact</h2>
-        <p>Email: caman.neo01@gmail.com</p>
-        <p>Phone: +917488451632</p>
-        <p>Linkdln: www.linkedin.com/in/amankc-neo</p>
-        <p>Github: https://gihub.com/amankc-neo</p>
+        <p>Email: caman.neo01@gmail.com</p> <!-- Updated email -->
+        <p>Phone: +917488451632</p> <!-- Updated phone -->
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/amankc-neo" style="color: #FFD700;">www.linkedin.com/in/amankc-neo</a></p> <!-- Updated LinkedIn -->
+        <p>GitHub: <a href="https://github.com/amankc-neo" style="color: #FFD700;">https://github.com/amankc-neo</a></p> <!-- Updated GitHub -->
     </footer>
 
     <script>
@@ -139,3 +166,4 @@
     </script>
 </body>
 </html>
+
