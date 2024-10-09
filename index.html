@@ -16,13 +16,15 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             text-align: center;
+            height: 100vh;
         }
 
         header {
             background-color: transparent;
             padding: 20px 0;
+            position: relative;
+            top: -50px; /* Adjust to make the header appear properly */
         }
 
         h1 {
@@ -93,6 +95,11 @@
             text-align: center;
             padding: 10px 0;
         }
+
+        a {
+            color: #FFD700; /* Change link color */
+            text-decoration: none; /* Remove underline */
+        }
     </style>
 </head>
 <body>
@@ -123,10 +130,10 @@
 
     <footer>
         <h2>Contact</h2>
-        <p>Email: caman.neo01@gmail.com</p> <!-- Updated email -->
-        <p>Phone: +917488451632</p> <!-- Updated phone -->
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/amankc-neo" style="color: #FFD700;">www.linkedin.com/in/amankc-neo</a></p> <!-- Updated LinkedIn -->
-        <p>GitHub: <a href="https://github.com/amankc-neo" style="color: #FFD700;">https://github.com/amankc-neo</a></p> <!-- Updated GitHub -->
+        <p>Email: <a href="mailto:caman.neo01@gmail.com">caman.neo01@gmail.com</a></p> <!-- Updated email -->
+        <p>Phone: <a href="tel:+917488451632">+917488451632</a></p> <!-- Updated phone -->
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/amankc-neo">www.linkedin.com/in/amankc-neo</a></p> <!-- Updated LinkedIn -->
+        <p>GitHub: <a href="https://github.com/amankc-neo">https://github.com/amankc-neo</a></p> <!-- Updated GitHub -->
     </footer>
 
     <script>
@@ -166,4 +173,3 @@
     </script>
 </body>
 </html>
-
