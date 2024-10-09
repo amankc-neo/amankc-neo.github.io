@@ -1,0 +1,13 @@
+{
+    "skills": [
+        {"name": "Cloud Computing/Cloud"},
+        {"name": "DevOps"},
+        {"name": "Linux & Shell Scripting/Automation"},
+        {"name": "IAC - Terraform & Ansible"},
+        {"name": "Containers & orchestration - Docker/ Kubernetes"},
+        {"name": "Azure, AWS"},
+        {"name": "Python"},
+        {"name": "Networking"},
+        {"name": "CI/CD - Jenkins, Github actions, GitlabCI, CircleCI, ArgoCD"}
+    ]
+}

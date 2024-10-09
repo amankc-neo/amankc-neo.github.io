@@ -1,0 +1,13 @@
+{
+    "projects": [
+        {
+            "name": "Containerization of node.js and flask application via Docker",
+            "link": "https://github.com/amankc-neo/node.js_app_docker.git"
+            "link": "https://github.com/amankc-neo/flask_app_docker.git"
+        },
+        {
+            "name": "CICD using Jenkins ft Docker",
+            "link": "https://github.com/amankc-neo/CI-CD.git"
+        }
+    ]
+}

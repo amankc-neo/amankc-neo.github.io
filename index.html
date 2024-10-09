@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I am Aman K. Choudhary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            color: #007BFF;
+            cursor: pointer;
+        }
+
+        .content {
+            display: none; /* Hide content initially */
+            margin-top: 10px;
+        }
+
+        .project, .skill {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #333;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aman KC</h1>
+        <nav>
+            <a href="#projects" onclick="toggleSection('project-content')">Projects</a>
+            <a href="#skills" onclick="toggleSection('skill-content')">Skills</a>
+        </nav>
+    </header>
+
+    <section id="projects">
+        <h2 onclick="toggleSection('project-content')">Projects</h2>
+        <div class="content" id="project-content">
+            <div id="project-list"></div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 onclick="toggleSection('skill-content')">Skills</h2>
+        <div class="content" id="skill-content">
+            <div id="skill-list"></div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Contact</h2>
+        <p>Email: caman.neo01@gmail.com</p>
+        <p>Phone: +917488451632</p>
+        <p>Linkdln: www.linkedin.com/in/amankc-neo</p>
+        <p>Github: https://gihub.com/amankc-neo</p>
+    </footer>
+
+    <script>
+        // Toggle function for displaying and hiding section content
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Fetching Projects
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const projectList = document.getElementById('project-list');
+                data.projects.forEach(project => {
+                    const projectDiv = document.createElement('div');
+                    projectDiv.className = 'project';
+                    projectDiv.innerHTML = `<h3>${project.name}</h3><p>${project.description}</p>`;
+                    projectList.appendChild(projectDiv);
+                });
+            })
+            .catch(error => console.error('Error fetching projects:', error));
+
+        // Fetching Skills
+        fetch('skills.json')
+            .then(response => response.json())
+            .then(data => {
+                const skillList = document.getElementById('skill-list');
+                data.skills.forEach(skill => {
+                    const skillDiv = document.createElement('div');
+                    skillDiv.className = 'skill';
+                    skillDiv.innerHTML = `<p>${skill.name}</p>`;
+                    skillList.appendChild(skillDiv);
+                });
+            })
+            .catch(error => console.error('Error fetching skills:', error));
+    </script>
+</body>
+</html>
